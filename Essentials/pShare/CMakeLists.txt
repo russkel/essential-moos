@@ -1,7 +1,7 @@
 #this builds the pScheduler application
 set(EXECNAME pShare)
 
-find_package(MOOS 10.0)
+# find_package(MOOS 10.0)
 
 #what files are needed?
 SET(SRCS   Share.cpp Listener.cpp Route.cpp ShareHelp.cpp pShareMain.cpp)
@@ -15,8 +15,8 @@ INSTALL(TARGETS ${EXECNAME}
 )
 
 #copy resources
-file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/pshare_test_scripts DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
+# file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/pshare_test_scripts DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
 
-add_custom_command(TARGET pShare POST_BUILD
-                   COMMAND ${CMAKE_COMMAND} -E copy_directory
-                       ${CMAKE_CURRENT_SOURCE_DIR}/pshare_test_scripts ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
+# add_custom_command(TARGET pShare POST_BUILD
+#                    COMMAND ${CMAKE_COMMAND} -E copy_directory
+#                        ${CMAKE_CURRENT_SOURCE_DIR}/pshare_test_scripts ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
